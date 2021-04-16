@@ -1,4 +1,5 @@
 # Iniciar um servidor express
+
 ![Nodejs](https://img.shields.io/badge/-Nodejs-339933?style=flat-square&logo=Node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/-Express-339933?style=flat-square&logo=Express&logoColor=white)
 
@@ -8,44 +9,44 @@ Aplicação simples para ligar um servidor usando `express`.
 
 Primeiro precisamos importar o `express` para uma variável constante no projeto.
 
-```
-    const express = require('express');
+```js
+const express = require("express");
 ```
 
 Depois definimos uma variável constante para executar o `express`.
 
-```
-    const app = express();
+```js
+const app = express();
 ```
 
 _\*Podemos fazer esses dois passos de uma vez só, eu não gosto muito de utilizar, mas seria assim._
 
-```
-    const app = require('express')();
+```js
+const app = require("express")();
 ```
 
 Para iniciar o servidor, escolhemos uma porta e usamos a função `listen` na variável constante. _(No exemplo foi utilizado a porta 3000, mas ela pode ser alterada sem problemas)_
 
-```
-    app.listen(3000);
+```js
+app.listen(3000);
 ```
 
 _\*Dica: para saber se o servidor está mesmo ligado, atribuimos uma função **callback** na função `listen`, no exemplo, utilizamos `arrow function` e uma `function` padrão, (Não há diferença entre um ou outro)_
 
-```
-    app.listen(3000, () => console.log('[SERVER] Servindo a porta 3000'));
+```js
+app.listen(3000, () => console.log("[SERVER] Servindo a porta 3000"));
 
-        ou
+/* ou */
 
-    app.listen(3000, () => {
-        console.log('[SERVER] Servindo a porta 3000');
-    });
+app.listen(3000, () => {
+    console.log("[SERVER] Servindo a porta 3000");
+});
 
-        ou
+/* ou */
 
-    app.listen(3000, function() {
-        console.log('[SERVER] Servindo a porta 3000');
-    });
+app.listen(3000, function () {
+    console.log("[SERVER] Servindo a porta 3000");
+});
 ```
 
 Depois disso, seu servidor já estará funcionando, basta adicionar os `methods`(ou `métodos` em português) no seu servidor, no arquivo, deixei de exemplo um método `GET`.
@@ -59,10 +60,10 @@ Assim como o `listen`, o método também recebe um **callback**, onde ele recebe
 
 No exemplo, retornamos um código `HTTP` **200** (Ok), e uma mensagem em `json` "Tudo certo".
 
-```
-    app.get('/', (req, res) => {
-        res.status(200).json({ message: 'Tudo certo' });
-    });
+```js
+app.get("/", (req, res) => {
+    res.status(200).json({ message: "Tudo certo" });
+});
 ```
 
 ## Setup e inicialização
