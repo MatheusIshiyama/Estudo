@@ -20,19 +20,19 @@ No arquivo de uma **rota** sempre vai ser algo parecido com isso.
 
 _Routes/Rota.js_
 
-```
-    const express = require('express');
-    const Rota = express.Router();
+```js
+const express = require("express");
+const Rota = express.Router();
 
-    module.exports = Rota;
+module.exports = Rota;
 ```
 
 Para adicionar os `methods`, basta usar o método desejado, por exemplo um método `GET`
 
-```
-    Rota.get('/', (req, res) => {
-        res.status(200).json({ message: 'Rota' });
-    });
+```js
+Rota.get("/", (req, res) => {
+    res.status(200).json({ message: "Rota" });
+});
 ```
 
 **Importar rota no index.js**
@@ -41,17 +41,17 @@ Nesse pequeno código, importamos o `express`, e definimos que a nossa variável
 
 No nosso `index.js`, nós importamos a nossa **rota** e definimos onde ela será utilizada.
 
-```
-    const Rota = require('./Routes/Rota.js');
-    app.use('/rota', Rota);
+```js
+const Rota = require("./Routes/Rota.js");
+app.use("/rota", Rota);
 ```
 
 O primeiro paramêtro é o `path` _(caminho)_ onde ele irá ser utilizado, e depois a `rota` que é o arquivo que você criou na pasta `Routes`. Exemplo: definimos que o `path` seria `/rota`, sempre que acessar o `localhost:3000/rota`, será utilizado o arquivo `Rota.js`, se for para mostrar algo no `localhost:3000/rota` basta apenas utilizar um método assim
 
-```
-    Rota.get('/', (req, res) => {
-        res.status(200).json({ message: 'Rota' });
-    });
+```js
+Rota.get("/", (req, res) => {
+    res.status(200).json({ message: "Rota" });
+});
 ```
 
 Pois o `'/'` define que será na raiz do `path`, que está definido como `localhost:3000/rota`, no qual configuramos no arquivo `index.js`.
@@ -61,17 +61,17 @@ Pois o `'/'` define que será na raiz do `path`, que está definido como `localh
 **Instalar dependências**
 
 ```
-    npm i / npm install
-        ou
-    yarn / yarn install
+npm i / npm install
+    ou
+yarn / yarn install
 ```
 
 **Iniciar o projeto**
 
 ```
-    npm start
-        ou
-    yarn start
+npm start
+    ou
+yarn start
 ```
 
 ---
