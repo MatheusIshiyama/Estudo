@@ -71,17 +71,17 @@ app.get("/", (req, res) => {
 **Instalar dependências**
 
 ```
-    npm i / npm install
-        ou
-    yarn / yarn install
+npm i / npm install
+    ou
+yarn / yarn install
 ```
 
 **Para iniciar o projeto**
 
 ```
-    npm start
-        ou
-    yarn start
+npm start
+    ou
+yarn start
 ```
 
 ---
