@@ -75,17 +75,17 @@ O `middleware` irá garantir que quando chegar na rota, a `requisição` tenha a
 **Instalar dependências**
 
 ```
-    npm i / npm install
-        ou
-    yarn / yarn install
+npm i / npm install
+    ou
+yarn / yarn install
 ```
 
 **Iniciar o projeto**
 
 ```
-    npm start
-        ou
-    yarn start
+npm start
+    ou
+yarn start
 ```
 
 ---
